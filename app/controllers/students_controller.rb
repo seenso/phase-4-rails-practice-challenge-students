@@ -42,6 +42,7 @@ class StudentsController < ApplicationController
     def student_params
       params.permit(:name, :major, :age, :instructor_id)
       # When creating or updating a student, they must be associated with an instructor
+      # added instructor_id bcuz that's what the schema is using
     end
   
     def render_not_found_response
